@@ -1,12 +1,16 @@
 import React from 'react'
 import { FormContainer, Header, LoginContainer, StyledButton, StyledForm, StyledImg, StyledInput } from './LoginStyle'
 import mealSvg from '../../assets/meal.svg'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
+    let navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
-        window.location.href = "/home"
+        // window.location.href = "/home"
         // window.location.href = "/"
+
+        navigate("/home")
 
     }
     return (
